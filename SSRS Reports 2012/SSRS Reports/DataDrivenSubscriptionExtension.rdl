@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="ReportServer">
+      <ConnectionProperties>
+        <IntegratedSecurity>true</IntegratedSecurity>
+        <ConnectString>=Parameters!mProtocol.Value &amp; Parameters!ServerName.Value &amp; "/" &amp; Parameters!RSVDir.Value &amp; "/ReportService2005.asmx"</ConnectString>
+        <DataProvider>XML</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>5ccca780-9f2f-44ef-a93c-ee45a70b9d0b</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1in</BottomMargin>
+  <RightMargin>1in</RightMargin>
+  <ReportParameters>
+    <ReportParameter Name="SubscriptionID">
+      <DataType>String</DataType>
+      <Prompt>SubscriptionID</Prompt>
+    </ReportParameter>
+      <ReportParameter Name="ServerName">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>localhost</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Server Name:</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RSVDir">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>reportserver</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report Server VDir:</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RMVDir">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>reports</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report Manager VDir:</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="UseSSL">
+      <DataType>Boolean</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>False</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Use SSL</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="mProtocol">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>=IIF(Parameters!UseSSL.Value, "https://", "http://")</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+    </ReportParameter> 
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <List Name="list1">
+        <ReportItems>
+          <Textbox Name="Extension">
+            <rd:DefaultName>Extension</rd:DefaultName>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Value>=Fields!Extension.Value</Value>
+          </Textbox>
+        </ReportItems>
+        <DataSetName>DataSet1</DataSetName>
+      </List>
+    </ReportItems>
+    <Height>0.25in</Height>
+  </Body>
+  <rd:ReportID>c054eb80-19fe-4618-b052-fc75392852aa</rd:ReportID>
+  <LeftMargin>1in</LeftMargin>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <CommandText>&lt;Query xmlns="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices"&gt;
+&lt;Method Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" Name="GetDataDrivenSubscriptionProperties"/&gt;
+&lt;ElementPath&gt;GetDataDrivenSubscriptionPropertiesResponse{}/ExtensionSettings&lt;/ElementPath&gt;
+&lt;/Query&gt;</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="DataDrivenSubscriptionID">
+            <Value>=Parameters!SubscriptionID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <DataSourceName>ReportServer</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="Extension">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Extension</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>3.25in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

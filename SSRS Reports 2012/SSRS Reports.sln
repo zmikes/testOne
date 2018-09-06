@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "SSRS Reports", "SSRS Reports\SSRS Reports.rptproj", "{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CUKSVSQLELE002|Default = CUKSVSQLELE002|Default
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Production CUKSVAPPHUD013|Default = Production CUKSVAPPHUD013|Default
+		Production CUKSVSQLELE002|Default = Production CUKSVSQLELE002|Default
+		Production CUKSVSQLHUD026|Default = Production CUKSVSQLHUD026|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.CUKSVSQLELE002|Default.ActiveCfg = CUKSVSQLELE002
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.CUKSVSQLELE002|Default.Build.0 = CUKSVSQLELE002
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.CUKSVSQLELE002|Default.Deploy.0 = CUKSVSQLELE002
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.Debug|Default.ActiveCfg = Debug
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.Debug|Default.Build.0 = DebugLocal
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.Debug|Default.Deploy.0 = DebugLocal
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.DebugLocal|Default.Build.0 = DebugLocal
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.Production CUKSVAPPHUD013|Default.ActiveCfg = Production CUKSVAPPHUD013
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.Production CUKSVAPPHUD013|Default.Build.0 = Production CUKSVAPPHUD013
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.Production CUKSVAPPHUD013|Default.Deploy.0 = Production CUKSVAPPHUD013
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.Production CUKSVSQLELE002|Default.ActiveCfg = CUKSVSQLELE002
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.Production CUKSVSQLELE002|Default.Build.0 = CUKSVSQLELE002
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.Production CUKSVSQLELE002|Default.Deploy.0 = CUKSVSQLELE002
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.Production CUKSVSQLHUD026|Default.ActiveCfg = Production CUKSVSQLHUD026
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.Production CUKSVSQLHUD026|Default.Build.0 = Production CUKSVSQLHUD026
+		{DAC3AFF0-4FC5-4546-9DC5-36E8529A215A}.Production CUKSVSQLHUD026|Default.Deploy.0 = Production CUKSVSQLHUD026
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
